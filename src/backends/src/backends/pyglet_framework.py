@@ -42,8 +42,8 @@ import pyglet
 from pyglet import gl
 
 from Box2D import (b2Vec2, b2Draw)
-from framework import (FrameworkBase, Keys)
-from settings import fwSettings
+from backends.framework import (FrameworkBase, Keys)
+from backends.settings import fwSettings
 
 
 class grBlended (pyglet.graphics.Group):

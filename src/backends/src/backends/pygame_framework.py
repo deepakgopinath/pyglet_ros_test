@@ -57,8 +57,9 @@ from pygame.locals import (QUIT, KEYDOWN, KEYUP, MOUSEBUTTONDOWN,
 
 # from ..framework import (FrameworkBase, Keys)
 # from ..settings import fwSettings
-from framework import (FrameworkBase, Keys)
-from settings import fwSettings
+
+from backends.framework import (FrameworkBase, Keys)
+from backends.settings import fwSettings
 from Box2D import (b2DrawExtended, b2Vec2)
 
 try:
@@ -218,7 +219,7 @@ class PygameFramework(FrameworkBase):
         for key in keys:
             value = getattr(pygame.locals, key)
             setattr(Keys, key, value)
-        
+
 
     def __reset(self):
         # Screen/rendering-related
